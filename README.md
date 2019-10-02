@@ -21,7 +21,7 @@ yarn add ckeditor5-letter-case
 Update src/ckeditor.js with:
 
 ```js
-import LetterCase from 'ckeditor5-letter-case/src/letter-case';
+import LetterCase from 'ckeditor5-letter-case';
 
 Editor.builtinPlugins = [
   // ...

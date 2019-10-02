@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-letter-case",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple letter case convert plugin for ckeditor5",
   "main": "src/letter-case.js",
   "scripts": {

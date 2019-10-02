@@ -4,9 +4,9 @@ import Command from "@ckeditor/ckeditor5-core/src/command";
 import { addListToDropdown, createDropdown } from "@ckeditor/ckeditor5-ui/src/dropdown/utils";
 import Collection from "@ckeditor/ckeditor5-utils/src/collection";
 import Model from "@ckeditor/ckeditor5-ui/src/model";
-import { upperCase, lowerCase, titleCase, sentenceCase, toggleCase, getText } from "../utils";
+import { upperCase, lowerCase, titleCase, sentenceCase, toggleCase, getText } from "./utils";
 
-import LetterCaseIcon from "./../themes/icons/change-case.svg";
+import LetterCaseIcon from "./../themes/icons/letter-case.svg";
 
 // Lis of Change Case Options Available
 const LetterCaseOptions = [
