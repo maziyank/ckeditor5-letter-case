@@ -4,7 +4,7 @@
   "description": "simple letter case convert plugin for ckeditor5",
   "main": "src/letter-case.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "ckeditor5",
@@ -26,6 +26,18 @@
   "bugs": {
     "url": "https://github.com/maziyank/ckeditor5-letter-case/issues"
   },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  },
   "author": "maziyank",
-  "license": "GPL"
+  "license": "GPL",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  }
 }
