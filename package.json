@@ -1,0 +1,31 @@
+{
+  "name": "ckeditor5-letter-case",
+  "version": "1.0.0",
+  "description": "simple letter case convert plugin for ckeditor5",
+  "main": "src/letter-case.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ckeditor5",
+    "case",
+    "uppercase",
+    "lowercase",
+    "titlecase",
+    "plugin"
+  ],
+  "dependencies": {
+    "@ckeditor/ckeditor5-core": "^12.3.0",
+    "@ckeditor/ckeditor5-ui": "^14.0.0",
+    "@ckeditor/ckeditor5-utils": "^14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maziyank/ckeditor5-letter-case.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maziyank/ckeditor5-letter-case/issues"
+  },
+  "author": "maziyank",
+  "license": "GPL"
+}
