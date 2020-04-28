@@ -7,7 +7,7 @@ export const upperCase = (text) => {
 }
 
 export const sentenceCase = (text) => {
-    return text.charAt(0).toUpperCase() + text.slice(1, text.length);
+    return text.charAt(0).toUpperCase() + text.slice(1, text.length).toLowerCase();
 }
 
 export const titleCase = (text) => {
