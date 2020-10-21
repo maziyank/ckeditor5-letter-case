@@ -9,7 +9,7 @@ import { upperCase, lowerCase, titleCase, sentenceCase, toggleCase, getText } fr
 import LetterCaseIcon from "./../themes/icons/letter-case.svg";
 
 // Lis of Change Case Options Available
-const LetterCaseOptions = [
+const fullOptions = [
   {
     text: "Sentence case",
     mode: "sentenceCase"
@@ -37,12 +37,18 @@ export default class LetterCase extends Plugin {
     // Register the Change Case Command
     this.editor.commands.add("LetterCase", new LetterCaseCommand(this.editor));
 
+    // Get allowed modes
+    const allowedModes = this.editor.config.get( 'letterCase.only' )
+    this.letterCaseOptions = allowedModes && allowedModes.length
+      ? fullOptions.filter(option => allowedModes.includes(option.mode))
+      : fullOptions;
+
     // Initializing UI
     this.editor.ui.componentFactory.add("LetterCase", locale => {
       const dropdownView = createDropdown(locale);
       addListToDropdown(
         dropdownView,
-        this.getDropdownItemsDefinitions(LetterCaseOptions)
+        this.getDropdownItemsDefinitions(this.letterCaseOptions)
       );
 
       dropdownView.buttonView.set({
@@ -70,7 +76,7 @@ export default class LetterCase extends Plugin {
   getDropdownItemsDefinitions() {
     const itemDefinitions = new Collection();
 
-    for (const option of LetterCaseOptions) {
+    for (const option of this.letterCaseOptions) {
       const definition = {
         type: "button",
         model: new Model({
@@ -79,7 +85,7 @@ export default class LetterCase extends Plugin {
           withText: true
         })
       };
-      
+
       itemDefinitions.add(definition);
     }
 
@@ -91,7 +97,7 @@ class LetterCaseCommand extends Command {
   execute(mode) {
     const startPos = this.editor.model.document.selection.getFirstPosition();
     const endPos = this.editor.model.document.selection.getLastPosition();
-  
+
     this.editor.model.enqueueChange(writer => {
       // get selected text
       const range = writer.createRange(startPos, endPos);
