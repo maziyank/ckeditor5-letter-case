@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-letter-case",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "simple letter case convert plugin for ckeditor5",
   "main": "src/letter-case.js",
   "scripts": {
@@ -15,9 +15,9 @@
     "plugin"
   ],
   "dependencies": {
-    "@ckeditor/ckeditor5-core": "^19.0.0",
-    "@ckeditor/ckeditor5-ui": "^19.0.0",
-    "@ckeditor/ckeditor5-utils": "^19.0.0"
+    "@ckeditor/ckeditor5-core": "^25.0.0",
+    "@ckeditor/ckeditor5-ui": "^25.0.0",
+    "@ckeditor/ckeditor5-utils": "^25.0.0"
   },
   "repository": {
     "type": "git",
