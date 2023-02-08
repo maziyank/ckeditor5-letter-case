@@ -7,6 +7,8 @@ import Model from "@ckeditor/ckeditor5-ui/src/model";
 import { upperCase, lowerCase, titleCase, sentenceCase, toggleCase, getText } from "./utils";
 
 import LetterCaseIcon from "./../themes/icons/letter-case.svg";
+// test
+
 
 // Lis of Change Case Options Available
 const fullOptions = [
